@@ -65,7 +65,6 @@ class _CurrencyExchangePageState extends State<CurrencyExchangePage> {
       setState(() {
         csvData = parsedCsv;
       });
-      // Process the CSV data...
     } catch (e) {
       log('Error loading CSV file: $e');
       ScaffoldMessenger.of(context).showSnackBar(
@@ -87,7 +86,6 @@ class _CurrencyExchangePageState extends State<CurrencyExchangePage> {
       setState(() {
         csvData = parsedCsv;
       });
-      // Process the CSV data...
     } catch (e) {
       log('Error loading CSV file: $e');
       ScaffoldMessenger.of(context).showSnackBar(
@@ -179,8 +177,8 @@ class _CurrencyExchangePageState extends State<CurrencyExchangePage> {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 12.0),
             decoration: BoxDecoration(
-              color: Colors.grey[900], // Dark background color
-              borderRadius: BorderRadius.circular(8.0), // Rounded corners
+              color: Colors.grey[900],
+              borderRadius: BorderRadius.circular(8.0),
             ),
             child: DropdownButton<int>(
               value: selectedYear,
@@ -190,7 +188,7 @@ class _CurrencyExchangePageState extends State<CurrencyExchangePage> {
                   loadCSVData(selectedYear);
                 });
               },
-              dropdownColor: Colors.grey[900], // Dark dropdown background color
+              dropdownColor: Colors.grey[900],
               underline: Container(),
               items: List<DropdownMenuItem<int>>.generate(
                 11,
@@ -224,8 +222,8 @@ class _CurrencyExchangePageState extends State<CurrencyExchangePage> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey[900], // Dark background color
-                  borderRadius: BorderRadius.circular(8.0), // Rounded corners
+                  color: Colors.grey[900],
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: DropdownButton<int>(
                   value: selectedYear,
@@ -255,15 +253,14 @@ class _CurrencyExchangePageState extends State<CurrencyExchangePage> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey[900], // Dark background color
-                  borderRadius: BorderRadius.circular(8.0), // Rounded corners
+                  color: Colors.grey[900],
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: DropdownButton<int>(
                   value: selectedQuarter,
                   onChanged: (int? newValue) {
                     setState(() {
-                      selectedQuarter =
-                          newValue ?? 1; // Update selected quarter
+                      selectedQuarter = newValue ?? 1;
                       loadQuarterlyCSVData(selectedYear, selectedQuarter);
                     });
                   },
@@ -303,8 +300,8 @@ class _CurrencyExchangePageState extends State<CurrencyExchangePage> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey[900], // Dark background color
-                  borderRadius: BorderRadius.circular(8.0), // Rounded corners
+                  color: Colors.grey[900],
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: DropdownButton<int>(
                   value: selectedYear,
@@ -334,14 +331,14 @@ class _CurrencyExchangePageState extends State<CurrencyExchangePage> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 decoration: BoxDecoration(
-                  color: Colors.grey[900], // Dark background color
-                  borderRadius: BorderRadius.circular(8.0), // Rounded corners
+                  color: Colors.grey[900],
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: DropdownButton<int>(
                   value: selectedMonth,
                   onChanged: (int? newValue) {
                     setState(() {
-                      selectedMonth = newValue ?? 1; // Update selected month
+                      selectedMonth = newValue ?? 1;
                       loadMonthlyCSVData(selectedYear, selectedMonth);
                     });
                   },
